@@ -18,6 +18,7 @@ import {
   ChevronDownIcon,
   Bars3Icon,
   XMarkIcon,
+  MagnifyingGlassIcon
 } from "@heroicons/react/24/outline";
 import {
   Bars4Icon,
@@ -145,7 +146,7 @@ function NavListMenu() {
             </ListItem>
           </Typography>
         </MenuHandler>
-        <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
+        <MenuList className="hidden rounded-xl lg:block">
           <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0">
             {renderItems}
           </ul>
@@ -197,13 +198,21 @@ export default function Nav() {
   }, []);
  
   return (
-    <Navbar className="mx-auto w-10/12 py-2">
-      <div className="flex items-center justify-between text-blue-gray-900">
+    <Navbar className="mx-auto !w-full py-2 shadow-none" fullWidth={true} style={{width:"80%"}}>
+      <div className="w-10/12 mx-auto flex justify-between border-b-2 border-black/10 py-3 items-center">
+        <img src="https://westcanauto.com/wp-content/uploads/2023/05/WestCanAP_logoNOUSI-300x156.png" alt="" srcset="" className="w-[125px]" />
         
-        <div className="hidden lg:block">
-          <NavList />
-        </div>
-        <div className="hidden gap-2 lg:flex">
+       <div className="flex items-center">
+         
+      
+       <input type="text" className="hidden lg:block w-[500px] h-[50px] border-2 p-5" placeholder="Seach Parts, Hydraulics, Brakes, Suspensions"/>
+        <Button variant="danger" size="sm" color="black" className="p-4 rounded-none flex gap-2 items-center">
+        <MagnifyingGlassIcon className=" h-5 w-5 text-gray-400" />
+            Search
+          </Button>
+       </div>
+        
+        <div className="hidden gap-2 lg:flex lg:flex-row items-center">
           <Button variant="text" size="sm" color="blue-gray">
             Log In
           </Button>
@@ -211,6 +220,13 @@ export default function Nav() {
             Sign In
           </Button>
         </div>
+      </div>
+      <div className="w-10/12 mx-auto flex items-center justify-between text-blue-gray-900 py-1">
+        
+        <div className="hidden lg:block">
+          <NavList />
+        </div>
+       
         <IconButton
           variant="text"
           color="blue-gray"
