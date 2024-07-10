@@ -36,7 +36,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-hidden">
       <Slider {...settings}>
         <Header
           title="Find Parts That Fit Your Vehicle"
