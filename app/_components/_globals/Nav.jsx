@@ -246,7 +246,7 @@ export default function Nav() {
        </div>
         
         <div className="hidden gap-2 lg:flex lg:flex-row items-center">
-          <Button variant="text" size="sm" color="blue-gray">
+          <Button variant="text" size="sm" color="" className="text-[#b02027]">
             Log In
           </Button>
           <Button variant="gradient" size="sm">
@@ -277,7 +277,7 @@ export default function Nav() {
       <Collapse open={openNav}>
         <NavList />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
+          <Button variant="outlined" size="sm" color="red" fullWidth>
             Log In
           </Button>
           <Button variant="gradient" size="sm" fullWidth>

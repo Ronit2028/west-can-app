@@ -11,6 +11,7 @@ import Usps from "./_components/Usps";
 import SupplierList from "./_components/SupplierList";
 import Testimonials from "./_components/Testimonials";
 import About from "./_components/About";
+import ScrollToTop from './_components/ScrollToTop'
 
 export default function Home() {
   return (
@@ -28,6 +29,8 @@ export default function Home() {
         <Testimonials />
       </main>
       <Footer />
+      <ScrollToTop/>
+      
     </>
 
   );
