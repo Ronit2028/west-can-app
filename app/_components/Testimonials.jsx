@@ -1,45 +1,51 @@
-"use client"
+"use client";
 
 import { Button, Card, CardBody, Typography } from "@material-tailwind/react";
-import React from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const testimonials = [
   {
     name: "John Doe",
-    feedback: "The utility-first approach and extensive component library make it a breeze to create beautiful and responsive interfaces. 🎉",
+    feedback:
+      "The utility-first approach and extensive component library make it a breeze to create beautiful and responsive interfaces. 🎉",
     image: "https://www.material-tailwind.com/img/avatar1.jpg",
     rating: 5,
   },
   {
     name: "Jane Smith",
-    feedback: "Excellent customer service and a fantastic range of components that make development faster and easier. Highly recommend!",
+    feedback:
+      "Excellent customer service and a fantastic range of components that make development faster and easier. Highly recommend!",
     image: "https://www.material-tailwind.com/img/avatar2.jpg",
     rating: 4,
   },
   {
     name: "Sam Wilson",
-    feedback: "A great tool for building modern web applications with ease. The components are well-designed and easy to use.",
+    feedback:
+      "A great tool for building modern web applications with ease. The components are well-designed and easy to use.",
     image: "https://www.material-tailwind.com/img/avatar3.jpg",
     rating: 4,
   },
   {
     name: "John Doe",
-    feedback: "The utility-first approach and extensive component library make it a breeze to create beautiful and responsive interfaces. 🎉",
+    feedback:
+      "The utility-first approach and extensive component library make it a breeze to create beautiful and responsive interfaces. 🎉",
     image: "https://www.material-tailwind.com/img/avatar1.jpg",
     rating: 5,
   },
   {
     name: "Jane Smith",
-    feedback: "Excellent customer service and a fantastic range of components that make development faster and easier. Highly recommend!",
+    feedback:
+      "Excellent customer service and a fantastic range of components that make development faster and easier. Highly recommend!",
     image: "https://www.material-tailwind.com/img/avatar2.jpg",
     rating: 4,
   },
   {
     name: "Sam Wilson",
-    feedback: "A great tool for building modern web applications with ease. The components are well-designed and easy to use.",
+    feedback:
+      "A great tool for building modern web applications with ease. The components are well-designed and easy to use.",
     image: "https://www.material-tailwind.com/img/avatar3.jpg",
     rating: 4,
   },
@@ -51,7 +57,7 @@ const renderRating = (rating) => {
     stars.push(
       <svg
         key={i}
-        className={`w-5 h-5 ${i < rating ? 'text-yellow-500' : 'text-gray-300'}`}
+        className={`w-5 h-5 ${i < rating ? "text-yellow-500" : "text-gray-300"}`}
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
@@ -64,16 +70,36 @@ const renderRating = (rating) => {
 };
 
 const Testimonials = () => {
-  const settings = {// Adjust this value to control the visibility of the adjacent items
+  const settings = {
     dots: true,
     infinite: false,
     speed: 500,
     slidesToShow: 2.5,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div className='w-10/12 mx-auto py-12'>
+    <div className="w-10/12 mx-auto py-12">
       <Typography
         color="blue-gray"
         variant="lead"
@@ -90,25 +116,29 @@ const Testimonials = () => {
       </Typography>
       <Typography
         variant="lead"
-        className=" w-full lg:w-1/2 !text-gray-500  mb-10"
+        className="w-full lg:w-1/2 !text-gray-500 mb-10"
       >
-        From innovative startups to Fortune 500 companies, our client list spans a spectrum of
-        sectors, each with unique challenges that we've successfully navigated.
+        From innovative startups to Fortune 500 companies, our client list spans
+        a spectrum of sectors, each with unique challenges that we've
+        successfully navigated.
       </Typography>
       <Slider {...settings}>
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="p-2"> {/* Add padding to create a gap */}
+          <div key={index} className="p-2">
+            {/* Add padding to create a gap */}
             <Card shadow={true} className="w-full h-full">
               <CardBody className="pb-0 h-full">
                 <div className="flex gap-4">
-                  <img src={testimonial.image} alt={testimonial.name} className="w-[50px] h-[50px] object-cover object-center rounded-full mb-4" />
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-[50px] h-[50px] object-cover object-center rounded-full mb-4"
+                  />
                   <div>
                     <Typography className="mb-2" color="blue-gray" variant="h5">
                       {testimonial.name}
                     </Typography>
-                    <div className="flex mb-2">
-                      {renderRating(testimonial.rating)}
-                    </div>
+                    <div className="flex mb-2">{renderRating(testimonial.rating)}</div>
                   </div>
                 </div>
                 <Typography variant="p" className="mb-4">

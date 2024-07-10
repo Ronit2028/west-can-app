@@ -49,7 +49,7 @@ const StoreLocator = () => {
         </Typography>
         
       </div>
-      <div className='flex gap-4'>
+      <div className='flex flex-wrap md:flex-nowrap gap-4'>
       <div className="w-full md:w-1/2 bg-black/25 overflow-hidden rounded-md min-h-[50vh]">
         <img src="https://westcanauto.com/wp-content/uploads/2023/05/map-area.png" alt="" className='h-full w-full object-cover origin-center'/>
       </div>

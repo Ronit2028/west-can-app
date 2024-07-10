@@ -2,9 +2,9 @@ import React from 'react'
 
 const Categories = () => {
   return (
-    <div className='flex w-10/12 mx-auto gap-5'>
+    <div className='flex flex-wrap lg:flex-nowrap w-10/12 mx-auto gap-5'>
       <div className="w-full lg:w-1/2 rounded-md overflow-hidden" style={{backgroundImage:'url(https://img.freepik.com/free-photo/car-repair-garage_1170-1496.jpg?t=st=1720630527~exp=1720634127~hmac=f806692d5413c4947f91706f99652302d8f83079d3dd7a55639137b1485163c7&w=1060)',backgroundSize:"cover"}}>
-        <div className="overlay p-10 bg-[#00000080] flex flex-col justify-end text-white min-h-[75vh]">
+        <div className="overlay p-10 bg-[#00000080] flex flex-col justify-end text-white h-auto lg:min-h-[75vh]">
           <p className="text-xl font-semibold mb-10">
             West Can Auto Parts
           </p>
