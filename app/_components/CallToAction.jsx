@@ -1,11 +1,11 @@
 "use client"
 import React from 'react'
 import { Button, Typography } from "@material-tailwind/react";
-
+import sideImage from '@/sideimage.png'
 const CallToAction = () => {
   return (
     <section className="py-8 ">
-      <div className="w-10/12 mx-auto p-10 rounded-l-xl border shadow-md bg-[url('/image/gradient-bg-1.png')] rounded-xl bg-no-repeat lg:bg-contain bg-cover bg-right">
+      <div className="w-10/12 mx-auto p-10 rounded-l-xl border shadow-md bg-[url('/image/gradient-bg-1.png')] rounded-xl bg-no-repeat lg:bg-contain bg-cover bg-right" style={{backgroundImage:`url(${sideImage.src})`}}>
         <Typography
           variant="small"
           color="blue-gray"

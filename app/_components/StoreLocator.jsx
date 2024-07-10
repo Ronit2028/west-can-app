@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import { Typography } from "@material-tailwind/react";
+import { Button, Typography } from "@material-tailwind/react";
 
 const locations = [
   {
@@ -33,63 +33,60 @@ const StoreLocator = () => {
   };
 
   return (
-    <div className="w-10/12 mx-auto flex gap-4 py-12 my-10">
-      <div className="w-full md:w-1/2 bg-black/25 h-[50vh] overflow-hidden rounded-md">
-        <MapContainer center={[37.7749, -122.4194]} zoom={4} scrollWheelZoom={false} className="h-full">
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          {locations.map((store, index) => (
-            <Marker
-              key={index}
-              position={[store.position.lat, store.position.lng]}
-              onClick={() => handleMarkerClick(store)}
-            >
-              <Popup>
-                <div className="w-64">
-                  <h2 className="text-xl font-bold mb-2">{store.name}</h2>
-                  <p className="text-gray-700 mb-2">{store.description}</p>
-                  <img src={store.image} alt={store.name} className="w-full h-auto rounded-lg" />
-                </div>
-              </Popup>
-            </Marker>
-          ))}
-        </MapContainer>
+    <div className="w-10/12 mx-auto  py-12 my-10">
+       <div className=" mb-10 lg:mb-20 text-center">
+        <Typography
+          color="blue-gray"
+          className="mb-2 font-bold uppercase"
+        >
+          Products
+        </Typography>
+        <Typography
+          color="blue-gray"
+          className="mb-4 !text-2xl font-bold lg:!text-4xl"
+        >
+          Our Popular Categories
+        </Typography>
+        <Typography
+          variant="lead"
+          className="mx-auto !text-gray-500"
+        >
+          Choose From The Best
+        </Typography>
+      </div>
+      <div className='flex gap-4'>
+      <div className="w-full md:w-1/2 bg-black/25 overflow-hidden rounded-md min-h-[50vh]">
+        <img src="https://westcanauto.com/wp-content/uploads/2023/05/map-area.png" alt="" className='h-full w-full object-cover origin-center'/>
       </div>
       <div className="w-full md:w-1/2">
         <section className="mx-auto max-w-screen-md">
           <img
-            src={`https://www.material-tailwind.com/img/content2.jpg`}
+            src={`https://westcanauto.com/wp-content/uploads/2023/05/Screenshot-6.png`}
             alt="team work"
             className="mb-4 h-[28rem] w-full rounded-xl object-cover"
           />
-          <Typography
-            variant="small"
-            className="font-medium text-blue-500"
-          >
-            #blog #post
-          </Typography>
+          
           <Typography
             variant="h2"
             color="blue-gray"
             className="my-4 font-black text-4xl leading-snug"
           >
-            The Castle Looks Different at Night...
+            West Can Auto Parts - Abbotsford
           </Typography>
           <Typography className="font-normal text-gray-500">
-            This is the paragraph where you can write more details about your
-            product. Keep your user engaged by providing meaningful information.
-            Remember that by this time, the user is curious, otherwise he wouldn't
-            scroll to get here. Add a button if you want the user to see more. We
-            are here to make life better.
+          Our auto parts Abbotsford store features an exclusive range of quality industrial equipment, safety supplies, accessories, tools, and car parts that you can access anytime.
+          
             <br />
             <br />
-            And now I look and look around and there's so many Kanyes I've been
-            trying to figure out the bed design for the master bedroom at our
-            Hidden Hills compound... and thank you for turning my personal jean
-            jacket into a couture piece.
+            33406 South Fraser Way Abbotsford, BC V2S 2B5
+            <br />
+            <br />
           </Typography>
+          <Button variant='dark'>
+            Know More
+          </Button>
         </section>
+      </div>
       </div>
     </div>
   );
