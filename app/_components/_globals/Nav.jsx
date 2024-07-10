@@ -232,17 +232,29 @@ export default function Nav() {
  
   return (
     <Navbar className="mx-auto !w-full shadow-none" fullWidth={true} style={{width:"80%"}}>
-      <div className="w-10/12 mx-auto flex justify-between border-b-2 border-black/10 py-3 items-center">
-        <img src="https://westcanauto.com/wp-content/uploads/2023/05/WestCanAP_logoNOUSI-300x156.png" alt="" srcset="" className="w-[125px]" />
+      <div className="w-10/12 mx-auto flex justify-between lg:border-b-2 border-black/10 py-3 items-center">
+        <img src="https://westcanauto.com/wp-content/uploads/2023/05/WestCanAP_logoNOUSI-300x156.png" alt="" srcset="" className="w-[75px] lg:w-[125px]" />
         
        <div className="flex items-center">
          
       
        <input type="text" className="hidden lg:block w-[500px] h-[50px] border-2 p-5" placeholder="Seach Parts, Hydraulics, Brakes, Suspensions"/>
-        <Button variant="danger" size="sm" color="black" className="p-4 rounded-none flex gap-2 items-center">
+        <Button variant="danger" size="sm" color="black" className="p-2 lg:p-4 rounded-none flex gap-2 items-center">
         <MagnifyingGlassIcon className=" h-5 w-5 text-gray-400" />
-            Search
+            <span className="hidden lg:block">Search</span>
           </Button>
+          <IconButton
+          variant="text"
+          color="blue-gray"
+          className="lg:hidden"
+          onClick={() => setOpenNav(!openNav)}
+        >
+          {openNav ? (
+            <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+          ) : (
+            <Bars3Icon className="h-6 w-6" strokeWidth={2} />
+          )}
+        </IconButton>
        </div>
         
         <div className="hidden gap-2 lg:flex lg:flex-row items-center">
@@ -261,30 +273,9 @@ export default function Nav() {
           <button className="bg-[#b02027] rounded-md px-1 py-1 text-white w-[200px]">Store Location</button>
         </div>
        
-        <IconButton
-          variant="text"
-          color="blue-gray"
-          className="lg:hidden"
-          onClick={() => setOpenNav(!openNav)}
-        >
-          {openNav ? (
-            <XMarkIcon className="h-6 w-6" strokeWidth={2} />
-          ) : (
-            <Bars3Icon className="h-6 w-6" strokeWidth={2} />
-          )}
-        </IconButton>
+        
       </div>
-      <Collapse open={openNav}>
-        <NavList />
-        <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Button variant="outlined" size="sm" color="red" fullWidth>
-            Log In
-          </Button>
-          <Button variant="gradient" size="sm" fullWidth>
-            Sign In
-          </Button>
-        </div>
-      </Collapse>
+     
     </Navbar>
   );
 }

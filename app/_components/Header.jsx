@@ -11,7 +11,7 @@ const Header = ({ title, description, image }) => {
     <div className='w-full px-2'>
       <div className=' w-full rounded-md h-[50vh] mx-auto overflow-hidden' style={{backgroundImage:`url(${image})`, backgroundSize:"cover", backgroundPosition:"center center"}}>
       <div className="rounded-md bg-black/50 flex flex-col justify-end p-10 text-white w-full h-full">
-        <p className="tet-2xl lg:text-4xl font-semibold mb-4">
+        <p className="text-2xl lg:text-4xl font-semibold mb-4">
           {title}
         </p>
         <p className="text-md lg:text-xl w-full lg:w-1/3">
