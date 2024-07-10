@@ -37,22 +37,17 @@ const StoreLocator = () => {
        <div className=" mb-10 lg:mb-20 text-center">
         <Typography
           color="blue-gray"
-          className="mb-2 font-bold uppercase"
+          className="mb-2 font-bold uppercase text-[#b02027]"
         >
-          Products
+          Find Us
         </Typography>
         <Typography
           color="blue-gray"
           className="mb-4 !text-2xl font-bold lg:!text-4xl"
         >
-          Our Popular Categories
+          Our Store Locations
         </Typography>
-        <Typography
-          variant="lead"
-          className="mx-auto !text-gray-500"
-        >
-          Choose From The Best
-        </Typography>
+        
       </div>
       <div className='flex gap-4'>
       <div className="w-full md:w-1/2 bg-black/25 overflow-hidden rounded-md min-h-[50vh]">

@@ -9,7 +9,7 @@ export function SupplierList() {
         <Typography
           color="blue-gray"
           variant="lead"
-          className="!font-semibold lg:!text-lg !text-base"
+          className="!font-semibold lg:!text-lg !text-base text-[#b02027]"
         >
           More than 50+ brands trust us
         </Typography>

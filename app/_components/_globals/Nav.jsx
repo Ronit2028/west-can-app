@@ -169,9 +169,42 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4">Home</ListItem>
+        <ListItem className="flex items-center gap-2 py-2 pr-4">Product & Equipments</ListItem>
       </Typography>
       <NavListMenu />
+      <Typography
+        as="a"
+        href="#"
+        variant="small"
+        color="blue-gray"
+        className="font-medium"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
+          Our Advantage
+        </ListItem>
+      </Typography>
+      <Typography
+        as="a"
+        href="#"
+        variant="small"
+        color="blue-gray"
+        className="font-medium"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
+          Suppliers
+        </ListItem>
+      </Typography>
+      <Typography
+        as="a"
+        href="#"
+        variant="small"
+        color="blue-gray"
+        className="font-medium"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
+          Products and Equipments
+        </ListItem>
+      </Typography>
       <Typography
         as="a"
         href="#"
@@ -198,7 +231,7 @@ export default function Nav() {
   }, []);
  
   return (
-    <Navbar className="mx-auto !w-full py-2 shadow-none" fullWidth={true} style={{width:"80%"}}>
+    <Navbar className="mx-auto !w-full shadow-none" fullWidth={true} style={{width:"80%"}}>
       <div className="w-10/12 mx-auto flex justify-between border-b-2 border-black/10 py-3 items-center">
         <img src="https://westcanauto.com/wp-content/uploads/2023/05/WestCanAP_logoNOUSI-300x156.png" alt="" srcset="" className="w-[125px]" />
         
@@ -223,8 +256,9 @@ export default function Nav() {
       </div>
       <div className="w-10/12 mx-auto flex items-center justify-between text-blue-gray-900 py-1">
         
-        <div className="hidden lg:block">
+        <div className="lg:w-full lg:py-2  hidden lg:flex lg:justify-between">
           <NavList />
+          <button className="bg-[#b02027] rounded-md px-1 py-1 text-white w-[200px]">Store Location</button>
         </div>
        
         <IconButton

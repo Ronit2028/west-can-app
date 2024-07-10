@@ -4,18 +4,20 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { Button } from '@material-tailwind/react';
 
 const Header = ({ title, description, image }) => {
   return (
     <div className='w-full px-2'>
       <div className=' w-full rounded-md h-[50vh] mx-auto overflow-hidden' style={{backgroundImage:`url(${image})`, backgroundSize:"cover", backgroundPosition:"center center"}}>
       <div className="rounded-md bg-black/50 flex flex-col justify-end p-10 text-white w-full h-full">
-        <p className="text-4xl font-semibold mb-4">
+        <p className="tet-2xl lg:text-4xl font-semibold mb-4">
           {title}
         </p>
-        <p className="text-xl w-full lg:w-1/3">
+        <p className="text-md lg:text-xl w-full lg:w-1/3">
           {description}
         </p>
+        <button className='bg-[#b02027] text-white text-lg lg:text-xl w-fit px-4 py-2 rounded-md mt-4'> Know More</button>
       </div>
     </div>
     </div>

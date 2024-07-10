@@ -60,7 +60,7 @@ const PopularCategories = () => {
       <div className="mb-10 lg:mb-20 text-center">
         <Typography
           color="blue-gray"
-          className="mb-2 font-bold uppercase"
+          className="mb-2 font-bold uppercase text-[#b02027]"
         >
           Products
         </Typography>
