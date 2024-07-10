@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import Nav from "@/_globals/Nav";
-import Footer from "@/_globals/Footer";
+import Nav from "./_components/_globals/Nav";
+import Footer from "@/app/_components/_globals/Footer";
 import CallToAction from "./_components/CallToAction";
 import Header from "./_components/Header";
 import PopularCategories from "./_components/PopularCategories";
